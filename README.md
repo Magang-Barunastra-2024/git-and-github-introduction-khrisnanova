@@ -37,7 +37,7 @@ cat ~/.ssh/id_ed25519.pub | clip
 ### 2. Enter the repository name and select its type (public or private), then click Create Repository.
 ### 3. Copy the SSH link by clicking Code > SSH > copy button (double-box icon).
 
-## C. Push File from Local to Github
+## C. Connecting a Local Repository to GitHub
 ### 1. Manual Method
 #### a. Create a local folder with the same name as the repository.
 #### b. Open Git Bash in the folder and run the following commands:
@@ -47,11 +47,53 @@ git remote add origin <SSH link>
 git branch -M main
 git pull origin <branch>
 ```
+### 2. Using Git Clone
+#### a. Open Git Bash in the parent folder where you want the repository to appear.
+#### b. Run:
+```
+git clone <SSH link>
+```
+#### c. Navigate to the cloned folder, open Git Bash, and run:
+```
+git branch -M main
+```
+## D. Uploading Files to GitHub
+### 1. Add files to the local folder.
+### 2. Open Git Bash in the folder and run the following commands:
+```
+git add .
+git commit -m "Feel free to write a description or the change of your files"
+git push origin <branch>
+```
 
-## Create New Branch in Github 
+## E. Create New Branch in Github 
+### 1. Open the folder connected to GitHub.
+### 2. Run the following command in Git Bash:
+```
+git checkout -B <branch name>
+```
+### 3. To switch to another branch, use:
+```
+git checkout <branch name>
+```
 
-## Delete Branch in Github
+## F. Delete Branch in Github
+### 1. Switch to a branch that is not being deleted
+```
+git checkout <another branch name>
+```
+### 2. Delete the branch with the following command:
+```
+git branch -d <branch name>
+```
 
-## Merging Branch in Github
-
+## G. Merging Branch in Github
+### 1. Switch to the branch you want to merge changes into:
+```
+git checkout <main branch name>
+```
+### 2.Merge the branch with the following command :
+```
+ git merge <branch name>
+```
 ## Other Procedure
